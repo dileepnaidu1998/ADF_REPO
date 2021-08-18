@@ -239,6 +239,10 @@
 								"secureInput": false
 							},
 							"userProperties": [],
+							"typeProperties": {
+								"functionName": "Azure-jirachild-blobupload",
+								"method": "GET"
+							},
 							"linkedServiceName": {
 								"referenceName": "AzureFunction1",
 								"type": "LinkedServiceReference"
