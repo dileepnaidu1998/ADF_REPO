@@ -7,6 +7,10 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "Azure-jirato-snowflake-dev"
 		},
+		"AzureFunction1_properties_typeProperties_functionAppUrl": {
+			"type": "string",
+			"defaultValue": "https://azure-jirachild-blobupload.azurewebsites.net"
+		},
 		"AzureKeyvault_jira_object_dev_properties_typeProperties_baseUrl": {
 			"type": "string",
 			"defaultValue": "https://Azurejiratosnowflakedev.vault.azure.net/"
@@ -60,6 +64,9 @@
 					},
 					"AzureKeyvault_jira_object_dev_properties_typeProperties_baseUrl": {
 						"value": "[parameters('AzureKeyvault_jira_object_dev_properties_typeProperties_baseUrl')]"
+					},
+					"AzureFunction1_properties_typeProperties_functionAppUrl": {
+						"value": "[parameters('AzureFunction1_properties_typeProperties_functionAppUrl')]"
 					},
 					"Jira_connector_dev_properties_typeProperties_host": {
 						"value": "[parameters('Jira_connector_dev_properties_typeProperties_host')]"

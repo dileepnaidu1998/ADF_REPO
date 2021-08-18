@@ -5,6 +5,9 @@
 		"factoryName": {
 			"value": "Azure-jirato-snowflake-dev"
 		},
+		"AzureFunction1_properties_typeProperties_functionAppUrl": {
+			"value": "https://azure-jirachild-blobupload.azurewebsites.net"
+		},
 		"AzureKeyvault_jira_object_dev_properties_typeProperties_baseUrl": {
 			"value": "https://Azurejiratosnowflakedev.vault.azure.net/"
 		},
