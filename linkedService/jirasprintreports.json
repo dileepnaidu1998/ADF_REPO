@@ -1,0 +1,22 @@
+{
+	"name": "jirasprintreports",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "RestService",
+		"typeProperties": {
+			"url": "https://uscold.atlassian.net",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Basic",
+			"userName": "aboinepalli@uscold.com",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyvault_jira_object_dev",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "jiraobjectkey"
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"name": "Jira_sprintids_dataset_dev",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "jira_sprintids_dev",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "sprintids",
+				"container": "jirasprintidsdatasetdev"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

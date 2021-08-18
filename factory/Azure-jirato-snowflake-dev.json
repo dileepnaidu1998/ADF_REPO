@@ -1,0 +1,9 @@
+{
+	"name": "Azure-jirato-snowflake-dev",
+	"location": "centralus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "2120b1b3-4ce6-410f-bdfb-dca73282e1e7",
+		"tenantId": "e003853e-52e3-495e-b8d9-4857ec876399"
+	}
+}

@@ -1,0 +1,24 @@
+{
+	"name": "Jira_connector_dev",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "Jira",
+		"typeProperties": {
+			"host": "https://uscold.atlassian.net",
+			"port": 443,
+			"username": "aboinepalli@uscold.com",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyvault_jira_object_dev",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "jiraobjectkey"
+			},
+			"useEncryptedEndpoints": true,
+			"useHostVerification": true,
+			"usePeerVerification": true
+		}
+	}
+}

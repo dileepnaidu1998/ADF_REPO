@@ -1,0 +1,32 @@
+{
+	"name": "jira_json",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "jira_sprintids_dev",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"sprint_id_file": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@concat(dataset().sprint_id_file,'SprintReport.json')",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@concat(formatDateTime(utcnow(), 'yyyy-MM-dd')) ",
+					"type": "Expression"
+				},
+				"container": "jirasprintidsdatasetdev"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

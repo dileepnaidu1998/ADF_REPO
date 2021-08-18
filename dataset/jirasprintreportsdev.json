@@ -1,0 +1,27 @@
+{
+	"name": "jirasprintreportsdev",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "jirasprintreports",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"BoardId": {
+				"type": "string"
+			},
+			"SprintId": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": {
+				"value": "@concat('/rest/greenhopper/latest/rapid/charts/sprintreport?rapidViewId=',dataset().BoardId,'&sprintId=',dataset().sprintid)\n",
+				"type": "Expression"
+			}
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
