@@ -1,0 +1,84 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "Azure-jirato-snowflake-dev"
+		},
+		"AzureKeyvault_jira_object_dev_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://Azurejiratosnowflakedev.vault.azure.net/"
+		},
+		"Jira_connector_dev_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "https://uscold.atlassian.net"
+		},
+		"Jira_connector_dev_properties_typeProperties_username": {
+			"type": "string",
+			"defaultValue": "aboinepalli@uscold.com"
+		},
+		"jira_sprintids_dev_properties_typeProperties_sasUri_secretName": {
+			"type": "string",
+			"defaultValue": "blobsasuri"
+		},
+		"jirasprintreports_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://uscold.atlassian.net"
+		},
+		"jirasprintreports_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "aboinepalli@uscold.com"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "Azure-jirato-snowflake-dev_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureKeyvault_jira_object_dev_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyvault_jira_object_dev_properties_typeProperties_baseUrl')]"
+					},
+					"Jira_connector_dev_properties_typeProperties_host": {
+						"value": "[parameters('Jira_connector_dev_properties_typeProperties_host')]"
+					},
+					"Jira_connector_dev_properties_typeProperties_username": {
+						"value": "[parameters('Jira_connector_dev_properties_typeProperties_username')]"
+					},
+					"jira_sprintids_dev_properties_typeProperties_sasUri_secretName": {
+						"value": "[parameters('jira_sprintids_dev_properties_typeProperties_sasUri_secretName')]"
+					},
+					"jirasprintreports_properties_typeProperties_url": {
+						"value": "[parameters('jirasprintreports_properties_typeProperties_url')]"
+					},
+					"jirasprintreports_properties_typeProperties_userName": {
+						"value": "[parameters('jirasprintreports_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

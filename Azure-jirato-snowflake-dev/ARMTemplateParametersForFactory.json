@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "Azure-jirato-snowflake-dev"
+		},
+		"AzureKeyvault_jira_object_dev_properties_typeProperties_baseUrl": {
+			"value": "https://Azurejiratosnowflakedev.vault.azure.net/"
+		},
+		"Jira_connector_dev_properties_typeProperties_host": {
+			"value": "https://uscold.atlassian.net"
+		},
+		"Jira_connector_dev_properties_typeProperties_username": {
+			"value": "aboinepalli@uscold.com"
+		},
+		"jira_sprintids_dev_properties_typeProperties_sasUri_secretName": {
+			"value": "blobsasuri"
+		},
+		"jirasprintreports_properties_typeProperties_url": {
+			"value": "https://uscold.atlassian.net"
+		},
+		"jirasprintreports_properties_typeProperties_userName": {
+			"value": "aboinepalli@uscold.com"
+		}
+	}
+}
