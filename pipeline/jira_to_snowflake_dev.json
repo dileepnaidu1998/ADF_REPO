@@ -210,8 +210,8 @@
 				}
 			},
 			{
-				"name": "Wait1",
-				"type": "Wait",
+				"name": "ForEach2",
+				"type": "ForEach",
 				"dependsOn": [
 					{
 						"activity": "Get Metadata1",
@@ -222,7 +222,33 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
-					"waitTimeInSeconds": 1
+					"items": {
+						"value": "@activity('Get Metadata1').output.child items",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "Azure Function1",
+							"type": "AzureFunctionActivity",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "7.00:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"functionName": "Azure-jirachild-blobupload",
+								"method": "GET"
+							},
+							"linkedServiceName": {
+								"referenceName": "AzureFunction1",
+								"type": "LinkedServiceReference"
+							}
+						}
+					]
 				}
 			}
 		],
