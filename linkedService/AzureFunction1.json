@@ -1,0 +1,19 @@
+{
+	"name": "AzureFunction1",
+	"properties": {
+		"annotations": [],
+		"type": "AzureFunction",
+		"typeProperties": {
+			"functionAppUrl": "https://azure-jirachild-blobupload.azurewebsites.net",
+			"functionKey": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyvault_jira_object_dev",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "Functionkey"
+			},
+			"authentication": "Anonymous"
+		}
+	}
+}
