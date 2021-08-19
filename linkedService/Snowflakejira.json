@@ -1,0 +1,17 @@
+{
+	"name": "Snowflakejira",
+	"properties": {
+		"annotations": [],
+		"type": "Snowflake",
+		"typeProperties": {
+			"connectionString": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyvault_jira_object_dev",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "snowcredentials"
+			}
+		}
+	}
+}
