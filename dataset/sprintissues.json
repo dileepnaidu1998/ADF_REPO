@@ -1,0 +1,47 @@
+{
+	"name": "sprintissues",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Snowflakejira",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeTable",
+		"schema": [
+			{
+				"name": "CONTENTS",
+				"type": "VARCHAR",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "CONTENTS_ID",
+				"type": "VARCHAR",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "CONTENTS_KEY",
+				"type": "VARCHAR",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "CONTENTS_HIDDEN",
+				"type": "VARCHAR",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "SPRINT_ID",
+				"type": "VARCHAR",
+				"precision": 0,
+				"scale": 0
+			}
+		],
+		"typeProperties": {
+			"schema": "SNOWFLAKE",
+			"table": "SPRINT_ISSUES"
+		}
+	}
+}

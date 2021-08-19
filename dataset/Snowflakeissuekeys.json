@@ -1,0 +1,41 @@
+{
+	"name": "Snowflakeissuekeys",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Snowflakejira",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeTable",
+		"schema": [
+			{
+				"name": "CONTENTS",
+				"type": "VARCHAR",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "KEYSADDED",
+				"type": "VARCHAR",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "KEYSVALUE",
+				"type": "VARCHAR",
+				"precision": 0,
+				"scale": 0
+			},
+			{
+				"name": "SPRINT",
+				"type": "VARCHAR",
+				"precision": 0,
+				"scale": 0
+			}
+		],
+		"typeProperties": {
+			"schema": "SNOWFLAKE",
+			"table": "ISSUESADDED_IN_SPRINT"
+		}
+	}
+}
