@@ -285,7 +285,13 @@
 										"type": "SnowflakeImportCopyCommand"
 									}
 								},
-								"enableStaging": false
+								"enableStaging": true,
+								"stagingSettings": {
+									"linkedServiceName": {
+										"referenceName": "jira_sprintids_dev",
+										"type": "LinkedServiceReference"
+									}
+								}
 							},
 							"inputs": [
 								{
@@ -326,8 +332,49 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
-								"enableStaging": false
-							}
+								"source": {
+									"type": "DelimitedTextSource",
+									"storeSettings": {
+										"type": "AzureBlobStorageReadSettings",
+										"recursive": true,
+										"enablePartitionDiscovery": false
+									},
+									"formatSettings": {
+										"type": "DelimitedTextReadSettings"
+									}
+								},
+								"sink": {
+									"type": "SnowflakeSink",
+									"importSettings": {
+										"type": "SnowflakeImportCopyCommand"
+									}
+								},
+								"enableStaging": true,
+								"stagingSettings": {
+									"linkedServiceName": {
+										"referenceName": "jira_sprintids_dev",
+										"type": "LinkedServiceReference"
+									}
+								}
+							},
+							"inputs": [
+								{
+									"referenceName": "sprintissuess",
+									"type": "DatasetReference",
+									"parameters": {
+										"sprintid": {
+											"value": "@item().name",
+											"type": "Expression"
+										}
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "sprintissues",
+									"type": "DatasetReference"
+								}
+							]
 						},
 						{
 							"name": "estimatedsum",
@@ -349,8 +396,49 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
-								"enableStaging": false
-							}
+								"source": {
+									"type": "DelimitedTextSource",
+									"storeSettings": {
+										"type": "AzureBlobStorageReadSettings",
+										"recursive": true,
+										"enablePartitionDiscovery": false
+									},
+									"formatSettings": {
+										"type": "DelimitedTextReadSettings"
+									}
+								},
+								"sink": {
+									"type": "SnowflakeSink",
+									"importSettings": {
+										"type": "SnowflakeImportCopyCommand"
+									}
+								},
+								"enableStaging": true,
+								"stagingSettings": {
+									"linkedServiceName": {
+										"referenceName": "jira_sprintids_dev",
+										"type": "LinkedServiceReference"
+									}
+								}
+							},
+							"inputs": [
+								{
+									"referenceName": "estimatedsum",
+									"type": "DatasetReference",
+									"parameters": {
+										"sprintid": {
+											"value": "@item().name",
+											"type": "Expression"
+										}
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "Snowflakeestimatedsum",
+									"type": "DatasetReference"
+								}
+							]
 						},
 						{
 							"name": "issuekeys",
@@ -372,8 +460,49 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
-								"enableStaging": false
-							}
+								"source": {
+									"type": "DelimitedTextSource",
+									"storeSettings": {
+										"type": "AzureBlobStorageReadSettings",
+										"recursive": true,
+										"enablePartitionDiscovery": false
+									},
+									"formatSettings": {
+										"type": "DelimitedTextReadSettings"
+									}
+								},
+								"sink": {
+									"type": "SnowflakeSink",
+									"importSettings": {
+										"type": "SnowflakeImportCopyCommand"
+									}
+								},
+								"enableStaging": true,
+								"stagingSettings": {
+									"linkedServiceName": {
+										"referenceName": "jira_sprintids_dev",
+										"type": "LinkedServiceReference"
+									}
+								}
+							},
+							"inputs": [
+								{
+									"referenceName": "issuekeys",
+									"type": "DatasetReference",
+									"parameters": {
+										"sprintid": {
+											"value": "@item().name",
+											"type": "Expression"
+										}
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "Snowflakeissuekeys",
+									"type": "DatasetReference"
+								}
+							]
 						}
 					]
 				}
