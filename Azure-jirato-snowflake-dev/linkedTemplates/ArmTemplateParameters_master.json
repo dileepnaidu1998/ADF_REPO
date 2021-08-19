@@ -17,6 +17,9 @@
 		"Jira_connector_dev_properties_typeProperties_username": {
 			"value": "aboinepalli@uscold.com"
 		},
+		"Snowflakejira_properties_typeProperties_connectionString_secretName": {
+			"value": "snowcredentials"
+		},
 		"jira_sprintids_dev_properties_typeProperties_sasUri_secretName": {
 			"value": "blobsasuri"
 		},

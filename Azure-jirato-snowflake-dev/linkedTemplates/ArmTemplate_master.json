@@ -23,6 +23,10 @@
 			"type": "string",
 			"defaultValue": "aboinepalli@uscold.com"
 		},
+		"Snowflakejira_properties_typeProperties_connectionString_secretName": {
+			"type": "string",
+			"defaultValue": "snowcredentials"
+		},
 		"jira_sprintids_dev_properties_typeProperties_sasUri_secretName": {
 			"type": "string",
 			"defaultValue": "blobsasuri"
@@ -73,6 +77,9 @@
 					},
 					"Jira_connector_dev_properties_typeProperties_username": {
 						"value": "[parameters('Jira_connector_dev_properties_typeProperties_username')]"
+					},
+					"Snowflakejira_properties_typeProperties_connectionString_secretName": {
+						"value": "[parameters('Snowflakejira_properties_typeProperties_connectionString_secretName')]"
 					},
 					"jira_sprintids_dev_properties_typeProperties_sasUri_secretName": {
 						"value": "[parameters('jira_sprintids_dev_properties_typeProperties_sasUri_secretName')]"
