@@ -37,5 +37,6 @@
 			"schema": "SNOWFLAKE",
 			"table": "ESTIMATED_SUM"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }

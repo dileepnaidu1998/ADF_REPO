@@ -1,8 +1,8 @@
 {
-	"name": "Snowflakeissuekeys",
+	"name": "issuekeysadded",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "Snowflakejira",
+			"referenceName": "Snowflake1",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],

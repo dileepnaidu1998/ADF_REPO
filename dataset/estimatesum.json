@@ -1,8 +1,8 @@
 {
-	"name": "Snowflakeissuekeys",
+	"name": "estimatesum",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "Snowflakejira",
+			"referenceName": "Snowflake1",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
@@ -15,19 +15,19 @@
 				"scale": 0
 			},
 			{
-				"name": "KEYSADDED",
+				"name": "SPRINT_ID",
 				"type": "VARCHAR",
 				"precision": 0,
 				"scale": 0
 			},
 			{
-				"name": "KEYSVALUE",
+				"name": "TEXT",
 				"type": "VARCHAR",
 				"precision": 0,
 				"scale": 0
 			},
 			{
-				"name": "SPRINT",
+				"name": "VALUE",
 				"type": "VARCHAR",
 				"precision": 0,
 				"scale": 0
@@ -35,7 +35,7 @@
 		],
 		"typeProperties": {
 			"schema": "SNOWFLAKE",
-			"table": "ISSUESADDED_IN_SPRINT"
+			"table": "ESTIMATED_SUM"
 		}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"

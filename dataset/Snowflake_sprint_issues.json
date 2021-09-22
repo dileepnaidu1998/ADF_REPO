@@ -1,0 +1,17 @@
+{
+	"name": "Snowflake_sprint_issues",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Snowflake1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "SNOWFLAKE",
+			"table": "SPRINT_ISSUES"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

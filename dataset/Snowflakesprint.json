@@ -103,5 +103,6 @@
 			"schema": "SNOWFLAKE",
 			"table": "SPRINT_DETAILS"
 		}
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }

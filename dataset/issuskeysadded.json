@@ -1,5 +1,5 @@
 {
-	"name": "estimatedsum",
+	"name": "issuskeysadded",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "jira_sprintids_dev",
@@ -16,7 +16,7 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"fileName": {
-					"value": "@concat(dataset().sprintid,'_blob2')",
+					"value": "@concat(dataset().sprintid,'_blob3')",
 					"type": "Expression"
 				},
 				"folderPath": {

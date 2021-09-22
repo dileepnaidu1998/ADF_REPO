@@ -1,5 +1,5 @@
 {
-	"name": "Snowflakejira",
+	"name": "Snowflake1",
 	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
 		"annotations": [],
@@ -11,7 +11,8 @@
 					"referenceName": "AzureKeyvault_jira_object_dev",
 					"type": "LinkedServiceReference"
 				},
-				"secretName": "snowcredentials"
+				"secretName": "snowcredentials",
+				"secretVersion": ""
 			}
 		}
 	}
